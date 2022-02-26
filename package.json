@@ -1,0 +1,22 @@
+{
+  "name": "nano-rpc-client",
+  "version": "1.0.0",
+  "description": "Nano RPC (API) Client",
+  "main": "nano-rpc-client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nano",
+    "currency",
+    "crypto",
+    "api",
+    "rpc",
+    "client"
+  ],
+  "author": "Bryan Hazelbaker",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
