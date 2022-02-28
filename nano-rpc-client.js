@@ -96,10 +96,12 @@ exports.nRpc = function(config) {
 					let indexAccount = blocksInfo[hash].contents.link_as_account;
 					blocksInfo[hash].block_hash = hash;
 					accountsBlocksInfo[indexAccount].push(blocksInfo[hash]);
-					if (typeof options['sort'] !== 'undefined' && options.sort == 'descending')
-						accountsBlocksInfo[indexAccount].sort((a, b) => (a.local_timestamp < b.local_timestamp) ? 1 : -1);
-					if (typeof options['sort'] !== 'undefined' && options.sort == 'ascending')
-						accountsBlocksInfo[indexAccount].sort((a, b) => (a.local_timestamp > b.local_timestamp) ? 1 : -1);
+					if (typeof options != 'undefined') {
+						if (typeof options['sort'] !== 'undefined' && options.sort == 'descending')
+							accountsBlocksInfo[indexAccount].sort((a, b) => (a.local_timestamp < b.local_timestamp) ? 1 : -1);
+						if (typeof options['sort'] !== 'undefined' && options.sort == 'ascending')
+							accountsBlocksInfo[indexAccount].sort((a, b) => (a.local_timestamp > b.local_timestamp) ? 1 : -1);
+					}
 				}
 			}
 			resolve(accountsBlocksInfo);
