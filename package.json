@@ -1,8 +1,8 @@
 {
-  "name": "nano-rpc-client",
+  "name": "xno-rpc-client",
   "version": "1.0.0",
   "description": "Nano RPC (API) Client",
-  "main": "nano-rpc-client.js",
+  "main": "xno-rpc-client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
